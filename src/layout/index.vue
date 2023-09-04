@@ -55,9 +55,12 @@
           flex-direction: column;
           align-items: center;
           height: 200px;
+          .router-link-active i{
+            color:red
+          }
           .home-cont-left-img{
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             border-radius: 15px;
             margin-top: 20px;
           }
@@ -69,7 +72,7 @@
         }
       }
       .home-cont-right{
-        flex: 5;
+        flex: 9;
       }
     }
   }

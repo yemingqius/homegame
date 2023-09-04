@@ -14,12 +14,26 @@ const routes = [
       {
         path:"/list",
         name:"list",
-        component:()=>import("../views/user/userList.vue")
+        component:()=>import("../views/user/userList.vue"),
+        children:[
+          {
+            path:"/chat",
+            name:"chat",
+            component:()=>import("../views/chat/index.vue"),
+          }
+        ]
       },
       {
         path:"/add",
         name:"add",
-        component:()=>import("../views/user/userAdd.vue")
+        component:()=>import("../views/user/userAdd.vue"),
+        children:[
+          {
+            path:"/userAdd",
+            name:"userAdd",
+            component:()=>import("../views/user/add.vue"),
+          }
+        ]
       }
     ]
   }
